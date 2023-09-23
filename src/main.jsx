@@ -13,6 +13,7 @@ import Banner from './assets/Component/Banner/Banner.jsx';
 import Statistics from './assets/Component/Statisties/Statistics.jsx';
 import Appliedjob from './assets/Component/Appliedjobs/Appliedjob.jsx';
 import Blogs from './assets/Component/Blogs/Blogs.jsx';
+import JobsDitiles from './assets/Component/Home/FeatureJobs/JobsDitiles.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,14 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element: <Blogs></Blogs>
+      }
+      ,
+      {
+        path:'/job/:id',
+        element: <JobsDitiles></JobsDitiles>,
+        loader: ()=>fetch('../public/jobs.json')
+        
+
       }
     ]
 

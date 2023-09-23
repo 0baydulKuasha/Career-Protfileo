@@ -5,8 +5,11 @@ import Navber from "../Navber/Navber";
 const Root = () => {
     return (
         <div>
-            <Navber></Navber>
-            <Outlet></Outlet>
+            <div className="container m-auto">
+                <Navber></Navber>
+                <Outlet></Outlet>                
+            </div>
+
             <Footer></Footer>
         </div>
     );
